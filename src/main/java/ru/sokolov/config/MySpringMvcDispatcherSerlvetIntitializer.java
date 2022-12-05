@@ -31,6 +31,7 @@ public class MySpringMvcDispatcherSerlvetIntitializer extends AbstractAnnotation
         registerHiddenFieldFilter(aServletContext);
     }
 
+    //включение поддержки PUT PATCH DELETE запросов в html для thymeleaf
     private void registerHiddenFieldFilter(ServletContext aContext) {
         aContext.addFilter("hiddenHttpMethodFilter",
                 new HiddenHttpMethodFilter()).addMappingForUrlPatterns(null ,true, "/*");

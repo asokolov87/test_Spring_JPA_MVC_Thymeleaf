@@ -66,7 +66,7 @@ public class BookService {
         bookRepository.deleteById(id);
     }
 
-    //назначает человека кто взял книгу и вря когда взял
+    //назначает человека кто взял книгу и когда взял
     @Transactional
     public void assign(int book_id, Person selectedPerson){
         bookRepository.findById(book_id).ifPresent(book -> {

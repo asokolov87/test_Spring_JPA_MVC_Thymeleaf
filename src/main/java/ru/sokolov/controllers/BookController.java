@@ -30,6 +30,7 @@ public class BookController {
     }
 
     // required = false  - параметр необязательный
+    //@RequestParam - получение параметра из строки по имени
     @GetMapping()
     public String index(@RequestParam(value = "page", required = false) Integer page,
                         @RequestParam(value = "books_per_page", required = false) Integer books_per_page,
